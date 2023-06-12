@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_154358) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_184044) do
   create_table "clubhouses", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
@@ -50,9 +50,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_154358) do
     t.integer "comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.index ["clubhouse_id"], name: "index_users_on_clubhouse_id"
     t.index ["comment_id"], name: "index_users_on_comment_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["post_id"], name: "index_users_on_post_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "clubhouses", "posts"
