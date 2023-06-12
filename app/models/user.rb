@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :clubhouse
-  belongs_to :post
-  belongs_to :comment
+  has_many :clubhouse
+  has_many :post
+  has_many :comment
 end

@@ -1,5 +1,4 @@
 class Clubhouse < ApplicationRecord
-  belongs_to :user
-  belongs_to :post
-  belongs_to :comment
+  has_many :user
+  has_many :post
 end
