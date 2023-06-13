@@ -1,6 +1,7 @@
-<h1>Posts</h1>
+<h1><%= @clubhouse.name%></h1>
+<h3>Posts</h3>
 
 <ul>
-  <p><%= @clubhouse.post.title%></p>
-  <p><%= @clubhouse.name%></p>
+  
+  <%= render @clubhouse.posts%>
 </ul>
