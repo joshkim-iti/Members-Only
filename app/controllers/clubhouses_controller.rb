@@ -8,4 +8,23 @@ class ClubhousesController < ApplicationController
     def new
         @clubhouse = Clubhouse.new
     end
+
+    def create
+        @clubhouse = Clubhouse.new(clubhouse_params)
+
+        if @clubhouse.save
+            redirect_to @clubhouse
+        else
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
+    def show
+        @clubhouse = Clubhouse.find(params[:id])
+    end
+
+    private
+    def clubhouse_params
+        params.require(:clubhouse).permit(:name)
+    end
 end
