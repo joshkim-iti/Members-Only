@@ -27,4 +27,8 @@ class ClubhousesController < ApplicationController
     def clubhouse_params
         params.require(:clubhouse).permit(:name)
     end
+
+    def show
+        @clubhouse = Clubhouse.find(params[:id])
+    end
 end

@@ -1,4 +1,4 @@
 class Clubhouse < ApplicationRecord
   has_many :user
-  has_many :post
+  has_many :posts
 end
