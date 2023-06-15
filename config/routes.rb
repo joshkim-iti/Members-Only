@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root "clubhouses#index"
+  get 'user/:user_id/clubhouses/:id/join', to: 'clubhouses#join', as: 'user_clubhouse_join'
 
   resources :user do
    resources :clubhouses do 

@@ -25,6 +25,14 @@ class ClubhousesController < ApplicationController
         @user = User.find(params[:user_id])
     end
 
+    def join
+        @clubhouse = Clubhouse.find(params[:id])
+        @user = User.find(params[:user_id])
+        @user.clubhouses << @clubhouse
+
+        redirect_to user_clubhouse_path(user_id: current_user.id, id: @clubhouse.id)
+    end
+
     private
     def clubhouse_params
         params.require(:clubhouse).permit(:name)
