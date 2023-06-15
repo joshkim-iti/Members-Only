@@ -12,8 +12,5 @@
         <path d="M18 12L6 12" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
         </svg>
 
-        <%= link_to "Add clubhouse", new_clubhouse_path %>
-    </div>
-
-</div>
+<%= link_to "Add clubhouse", new_user_clubhouse_path(current_user.id) %>
 

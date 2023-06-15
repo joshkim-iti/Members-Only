@@ -5,10 +5,19 @@ class Ability
 
   def initialize(user)
     return unless user.present?
-    #if user.clubhouse_id.include?(Post.clubhouse_id)
-    can :read, Post.user, Post.all do |post|
-      post.clubhouse_id == user.clubhouse_id
+    Clubhouse.all.each do |club|
+      if user.clubhouse_ids.include?(club.id)
+        can :read, club
+      end
+    end
+    
+    #if user.clubhouse_id.include?(clubhouse.id)
+     # can :read, Clubhouse 
+    #can :read, Clubhouse, Clubhouse.all do |club|
+    #  club.id == user.clubhouse_id
     #end
+    #end
+    
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

@@ -1,9 +1,8 @@
-<div class="clubhouse"> 
-    <h1 class="clubhouse-name"> <%= @clubhouse.name%> </h1>
+<h1><%= @clubhouse.name%></h1>
 
-    <h3 class="posts-header"> Posts </h3>
+<%show_author = can? :read, @clubhouse%>
+<h3>Posts</h3>
 
-    <%= render @clubhouse.posts%>
-    <% puts "Session" %>
-    <% puts session %>
-</div>
+<ul>
+  <%= render @clubhouse.posts, can_show_author: show_author%>
+</ul>
