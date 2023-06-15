@@ -12,3 +12,69 @@
 .post h2 {
     font-size: 30px;
 }
+
+.add-post {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 400px;
+    border: solid;
+    border-radius: 5px;
+    min-height: 70px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.add-post svg {
+    stroke: #facd39;
+}
+
+.add-post:hover {
+    background-color: #facd39;
+    color: #1b4ef5;
+    border-color: #facd39;
+}
+
+.add-post:hover svg {
+    fill: #1b4ef5;
+    stroke: #1b4ef5;
+}
+
+.new-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.post-form-label {
+    font-size: 30px;
+}
+
+.post-form-label input {
+    margin-top: 20px;
+    font-family: inherit;
+    font-size: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 400px;
+    max-width: 90vw;
+}
+
+.post-form-label textarea {
+    margin-top: 20px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 400px;
+    max-width: 90vw;
+    height: 200px;
+}
+.post-form-body {
+    display: flex;
+    flex-direction: row;
+}

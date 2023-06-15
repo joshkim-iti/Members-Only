@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   get 'user/:user_id/clubhouses/:id/join', to: 'clubhouses#join', as: 'user_clubhouse_join'
 
   resources :user do
-   resources :clubhouses do 
-      resources :posts do
-        resources :comments
-      end
-    end
+   resources :clubhouses 
+  end
+
+  resources :clubhouses do  
+    resources :posts
+  end
+  resources :posts do
+    resources :comments
   end
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
