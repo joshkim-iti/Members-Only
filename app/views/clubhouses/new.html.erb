@@ -1,9 +1,14 @@
+<div class="new-club">
+<h2> Create a clubhouse </h2>
+
 <%= form_with model: [@user, @user.clubhouses.build ] do |form| %>
-    <p>
-        <%= form.label :name %> <br>
+    <div class="club-form-label">
+        <%= form.label :name %>
         <%= form.text_field :name %>
-    </p>
-    <p>
+    </div>
+    <div class="submit-button">
         <%= form.submit %>
-    </p>
+    </div>
 <% end %>
+
+</div>

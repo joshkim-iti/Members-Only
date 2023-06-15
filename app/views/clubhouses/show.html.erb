@@ -1,8 +1,10 @@
-<h1><%= @clubhouse.name%></h1>
+<div class="clubhouse"> 
+    <h1 class="clubhouse-name"><%= @clubhouse.name%></h1>
 
-<%show_author = can? :read, @clubhouse%>
-<h3>Posts</h3>
+    <%show_author = can? :read, @clubhouse%>
+    <h3 class="posts-header">Posts</h3>
 
-<ul>
-  <%= render @clubhouse.posts, can_show_author: show_author%>
-</ul>
+    <div class="post-list">
+      <%= render @clubhouse.posts, can_show_author: show_author%>
+    </div>
+<div>

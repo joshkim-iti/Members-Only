@@ -1,4 +1,14 @@
 .posts-header {
     font-size: 40px;
     margin-top: 20px;
+    border-bottom: solid;
+    min-width: 200px;
+}
+
+.post-list {
+    margin-top: 10px;
+}
+
+.post h2 {
+    font-size: 30px;
 }

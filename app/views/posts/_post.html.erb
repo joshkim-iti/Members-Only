@@ -1,8 +1,9 @@
-<div>
-    <%= post.title%>
-    <span> by <span>
-    <%= post.user.username if can_show_author%>
-    <br>
+<div class="post">
+    <h2>
+        <%= post.title%>
+    </h2>
+    <%= "by #{post.user.username}" if can_show_author%>
+
     <p class="post-body">
         <%= post.body%>
     <p>

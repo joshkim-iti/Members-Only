@@ -14,7 +14,7 @@ class ClubhousesController < ApplicationController
         @clubhouse = Clubhouse.new(clubhouse_params)
 
         if @clubhouse.save
-            redirect_to user_clubhouse_path(id: current_user.id, clubhouse_id: @clubhouse.id)
+            redirect_to user_clubhouse_path(user_id: current_user.id, id: @clubhouse.id)
         else
             render :edit, status: :unprocessable_entity
         end
