@@ -1,6 +1,6 @@
 <div class="post">
     <h2>
-        <%= link_to post.title, user_clubhouse_post_path(clubhouse_id: post.clubhouse.id, id: post.id)%>
+        <%= link_to post.title, clubhouse_post_path(clubhouse_id: post.clubhouse.id, id: post.id)%>
     </h2>
     <%= "by #{post.user.username}" if can_show_author%>
 
