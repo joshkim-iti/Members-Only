@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Oswald&display=swap');
+
+.clubhouse-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+}
+
+.clubhouse-index h1 {
+    font-size: 50px;
+}
+
+.clubhouse-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 5px;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.clubhouse-link:hover {
+    background-color: #facd39;
+    color: #1b4ef5;
+    border-color: #facd39;
+}
+
+.clubhouse {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.clubhouse-name {
+    font-size: 60px;
+}
+
+.clubhouse-link {
+    border: solid;
+}
+
+.add-clubhouse {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 5px;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+}

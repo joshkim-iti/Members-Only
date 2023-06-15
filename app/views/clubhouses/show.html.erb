@@ -1,7 +1,9 @@
-<h1><%= @clubhouse.name%></h1>
-<h3>Posts</h3>
+<div class="clubhouse"> 
+    <h1 class="clubhouse-name"> <%= @clubhouse.name%> </h1>
 
-<ul>
-  
-  <%= render @clubhouse.posts%>
-</ul>
+    <h3 class="posts-header"> Posts </h3>
+
+    <%= render @clubhouse.posts%>
+    <% puts "Session" %>
+    <% puts session %>
+</div>
