@@ -1,5 +1,7 @@
 <div class="clubhouse"> 
     <%= @post.title%>
+    <%= "by #{@post.user.username}" if can? :read, @clubhouse%>
+
     <p>
     <%= @post.body%>
     <p>
