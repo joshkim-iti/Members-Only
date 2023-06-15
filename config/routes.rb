@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   root "clubhouses#index"
 
-  resources :clubhouses do 
-    resources :posts do
-      resources :comments
+  resources :user do
+   resources :clubhouses do 
+      resources :posts do
+        resources :comments
+      end
     end
   end
   

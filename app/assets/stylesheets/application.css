@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Geologica&family=Lilita+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Geologica&family=Oswald&display=swap');
+
+ * {
+    padding: 0;
+    margin: 0;
+ }
+
+ body {
+    background-color: #1b4ef5;
+    color: #facd39;
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Oswald', sans-serif;
+ }
+
+ a {
+    text-decoration: none;
+    color: inherit;
+ }
+
+ header {
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Lilita One', cursive;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    height: 120px;
+    width: 100vw;
+ }
