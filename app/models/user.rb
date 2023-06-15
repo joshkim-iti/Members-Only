@@ -16,7 +16,7 @@ class User < ApplicationRecord
     false
   end
   
-  has_many :clubhouse
-  has_many :post
-  has_many :comment
+  has_many :clubhouses
+  has_many :posts
+  has_many :comments
 end
