@@ -1,10 +1,10 @@
 <div class="post">
     <h2>
-        <%= post.title%>
+        <%= link_to post.title, user_clubhouse_post_path(clubhouse_id: post.clubhouse.id, id: post.id)%>
     </h2>
     <%= "by #{post.user.username}" if can_show_author%>
 
     <p class="post-body">
-        <%= post.body%>
+        <%= "#{post.body[0..5]}..."%>
     <p>
 <div>
