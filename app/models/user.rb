@@ -7,6 +7,14 @@ class User < ApplicationRecord
   def email_required?
     false
   end
+  def email_changed?
+    false
+  end
+  
+  # For ActiveRecord 5.1+
+  def will_save_change_to_email?
+    false
+  end
   
   has_many :clubhouse
   has_many :post

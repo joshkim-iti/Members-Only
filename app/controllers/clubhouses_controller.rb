@@ -7,6 +7,7 @@ class ClubhousesController < ApplicationController
 
     def new
         @clubhouse = Clubhouse.new
+        @user = User.find(params[:user_id])
     end
 
     def create
@@ -21,6 +22,7 @@ class ClubhousesController < ApplicationController
 
     def show
         @clubhouse = Clubhouse.find(params[:id])
+        @user = User.find(params[:user_id])
     end
 
     private

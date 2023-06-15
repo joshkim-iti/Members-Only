@@ -1,5 +1,7 @@
 <div>
     <%= post.title%>
+    <span> by <span>
+    <%= post.user.username if can_show_author%>
     <br>
     <p>
     <%= post.body%>

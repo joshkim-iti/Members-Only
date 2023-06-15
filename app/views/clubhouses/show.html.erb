@@ -1,7 +1,11 @@
 <h1><%= @clubhouse.name%></h1>
+<!--<%= @user.clubhouse.each do |club| %>
+  <%= club.id %>
+<%end%>-->
+
+<%show_author = can? :read, @clubhouse%>
 <h3>Posts</h3>
 
 <ul>
-  
-  <%= render @clubhouse.posts%>
+  <%= render @clubhouse.posts, can_show_author: show_author%>
 </ul>

@@ -2,5 +2,5 @@
 
 <%= render @clubhouses %>
 
-<%= link_to "Add clubhouse", new_clubhouse_path %>
+<%= link_to "Add clubhouse", new_user_clubhouse_path(current_user.id) %>
 
