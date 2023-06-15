@@ -1,0 +1,19 @@
+<div class="new-post">
+    <h1> Create a post </h1>
+
+    <%= form_with model: [@clubhouse, @clubhouse.posts.build] do |form| %>
+        <div class="post-form-label">
+            <%= form.text_field :title, placeholder: "Title" %>
+        </div>
+        <div class="post-form-label post-form-body">
+            <%= form.text_area :body, placeholder: "Put your thoughts here..." %>
+        </div>
+
+        <%= form.hidden_field :user_id, value: current_user.id %>
+        <%= form.hidden_field :clubhouse_id, value: @clubhouse.id %>
+
+        <div class="submit-button">
+            <%= form.submit user_id: @user.id %>
+        </div>
+    <% end %>
+</div>

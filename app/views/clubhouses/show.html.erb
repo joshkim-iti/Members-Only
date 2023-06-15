@@ -15,8 +15,19 @@
     <% end %>
 
     <h1 class="clubhouse-name"><%= @clubhouse.name%></h1>
-    <h3 class="posts-header">Posts</h3>
+    <% if show_author%>
+      <%= link_to new_clubhouse_post_path(user_id: current_user.id, clubhouse_id: @clubhouse.id) do %>
+          <div class="add-post"> 
+              <svg class="yellow-plus" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 6L12 18" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M18 12L6 12" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <p> <%= "Post to #{@clubhouse.name}"%> </p>
+          </div>
+      <% end %>
+    <% end %>
 
+    <h3 class="posts-header">Posts</h3>
     <div class="post-list">
       <%= render @clubhouse.posts, can_show_author: show_author%>
     </div>
