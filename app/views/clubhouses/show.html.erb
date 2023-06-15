@@ -10,6 +10,8 @@
               <p> Join clubhouse </p>
           </div>
       <% end %>
+    <% else %>
+      <h1> Welcome to the club <%= current_user.username %>! </h2>
     <% end %>
 
     <h1 class="clubhouse-name"><%= @clubhouse.name%></h1>
