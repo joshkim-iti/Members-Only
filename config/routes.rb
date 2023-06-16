@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   root "clubhouses#index"
   get 'user/:user_id/clubhouses/:id/join', to: 'clubhouses#join', as: 'user_clubhouse_join'
-
+  get 'user/:user_id/clubhouses/:id/leave', to: 'clubhouses#leave', as: 'user_clubhouse_leave'
+  
   resources :user do
    resources :clubhouses 
   end

@@ -37,5 +37,9 @@
         turbo_method: :delete,
         turbo_confirm: "Are you sure?"
       }%>
+
+    <% elsif show_author%>
+      <%= link_to "Leave Clubhouse", user_clubhouse_leave_path%>
+
     <%end%>
 <div>
