@@ -1,7 +1,12 @@
 <div class="post"> 
     
     <h1> <%= @post.title%> </h1>
-    <h3> By <%= @author.username %> </h3>
+
+    <%show_author = can? :read, @clubhouse%>
+    <% if show_author%>
+        <h3> By <%= @author.username %> </h3>
+    <% end %>
+    
     <p class="body">
         <%= @post.body%>
     <p>
