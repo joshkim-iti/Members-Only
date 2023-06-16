@@ -9,7 +9,21 @@
     margin-top: 10px;
 }
 
-.post h2 {
+.post-link {
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+}
+.post-link:hover {
+    background-color: #facd39;
+    color: #1b4ef5;
+    border-color: #facd39;
+}
+
+.post-link h2 {
     font-size: 30px;
 }
 
@@ -77,4 +91,20 @@
 .post-form-body {
     display: flex;
     flex-direction: row;
+}
+
+.post {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.post h1 {
+    font-size: 50px;
+}
+
+.post h3 {
+    font-size: 30px;
 }

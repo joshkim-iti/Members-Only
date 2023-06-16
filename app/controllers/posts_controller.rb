@@ -3,6 +3,7 @@ class PostsController < ApplicationController
         @clubhouse = Clubhouse.find(params[:clubhouse_id])
         @user = User.find(current_user.id)
         @post = Post.find(params[:id])
+        @author = User.find(@post.user_id)
     end
     def new
         @post = Post.new
