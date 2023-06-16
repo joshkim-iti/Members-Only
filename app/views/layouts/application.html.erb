@@ -13,6 +13,9 @@
   <body>
   <header>
     <h1> <%= link_to "Members Only", root_path %> </h1>
+    <% unless current_user.nil? %>
+      <h1 class="log-out"> <%= link_to "Log Out", destroy_user_session_path %> </h1>
+    <% end %>
   </header>
     <%= yield %>
   </body>

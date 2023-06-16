@@ -1,4 +1,4 @@
 <div class="comment"> 
-    <p class="author"> <%= @user.username %>
+    <p class="author"> <%= User.find(comment.user_id).username %>
     <p class="comment-body"> <%= comment.body %> </p>
 </div>
