@@ -1,0 +1,26 @@
+.devise-form {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.devise-form a {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.devise-form h2 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.devise-form form {
+    font-size: 25px;
+}
+
+.devise-form input {
+    font-family: inherit;
+    font-size: 20px;
+}
