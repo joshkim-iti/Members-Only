@@ -6,12 +6,12 @@
     <% if show_author%>
         <h3> By <%= @author.username %> </h3>
     <% end %>
-    
+
     <p class="body">
         <%= @post.body%>
     <p>
     <h2> Comments </h2>
-    <%= render @post.comments, locals: {author: @author.username} %>
+    <%= render @post.comments %>
     
     <h2>Add a comment:</h2>
     <%= form_with model: [ @post, @post.comments.build ] do |form| %>

@@ -45,3 +45,10 @@
     height: 120px;
     width: 100vw;
  }
+
+ .log-out {
+   position: absolute;
+   right: 40px;
+   font-size: 30px;
+   font-family: 'Oswald', sans-serif;
+ }
