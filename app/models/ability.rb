@@ -11,6 +11,11 @@ class Ability
       end
     end
     
+    Clubhouse.all.each do |club|
+      if user.id == club.creator_id
+        can :delete, club
+      end
+    end
     #if user.clubhouse_id.include?(clubhouse.id)
      # can :read, Clubhouse 
     #can :read, Clubhouse, Clubhouse.all do |club|
