@@ -14,7 +14,6 @@ class ClubhousesController < ApplicationController
         @clubhouse = Clubhouse.new(clubhouse_params)
 
         if @clubhouse.save
-            @clubhouse.creator_id = current_user.id
             redirect_to user_clubhouse_join_path(user_id: current_user.id, id: @clubhouse.id)
         else
             render :edit, status: :unprocessable_entity
@@ -37,6 +36,6 @@ class ClubhousesController < ApplicationController
 
     private
     def clubhouse_params
-        params.require(:clubhouse).permit(:name)
+        params.require(:clubhouse).permit(:name, :creator_id)
     end
 end
