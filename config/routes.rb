@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   root "clubhouses#index"
-  get 'user/:user_id/clubhouses/:id/join', to: 'clubhouses#join', as: 'user_clubhouse_join'
-  get 'user/:user_id/clubhouses/:id/leave', to: 'clubhouses#leave', as: 'user_clubhouse_leave'
+  get 'users/:user_id/clubhouses/:id/join', to: 'clubhouses#join', as: 'user_clubhouse_join'
+  get 'users/:user_id/clubhouses/:id/leave', to: 'clubhouses#leave', as: 'user_clubhouse_leave'
   
-  resources :user do
+  resources :users do
    resources :clubhouses 
   end
 
