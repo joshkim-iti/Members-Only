@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-    def index
-        #@user =  User.find(params[:user_id])
-        @clubhouses = Clubhouse.all
+    def show
+        @user = User.find(current_user.id)
+        @clubhouse = @user.clubhouses
+        @post = @user.posts
+        @comments = @user.comments
     end
 end
