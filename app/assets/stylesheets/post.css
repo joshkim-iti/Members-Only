@@ -101,10 +101,32 @@
     margin-top: 20px;
 }
 
+.post .body {
+    border-bottom: solid;
+    width: 400px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
 .post h1 {
     font-size: 50px;
 }
 
 .post h3 {
     font-size: 30px;
+}
+
+.post textarea {
+    font-family: inherit;
+    font-size: 20px;
+    padding: 10px;
+    min-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.post input {
+    font-family: inherit;
+    font-size: 20px;
+    
 }
