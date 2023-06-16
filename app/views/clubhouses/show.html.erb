@@ -31,4 +31,11 @@
     <div class="post-list">
       <%= render @clubhouse.posts, can_show_author: show_author%>
     </div>
+
+    <% if can? :delete, @clubhouse%>
+      <%= link_to "Delete Clubhouse", user_clubhouse_path(@clubhouse), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      }%>
+    <%end%>
 <div>

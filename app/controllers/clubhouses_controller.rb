@@ -34,6 +34,13 @@ class ClubhousesController < ApplicationController
         redirect_to user_clubhouse_path(user_id: current_user.id, id: @clubhouse.id)
     end
 
+    def destroy
+        @clubhouse = Clubhouse.find(params[:id])
+        @clubhouse.destroy
+
+        redirect_to root_path, status: :see_other
+    end
+
     private
     def clubhouse_params
         params.require(:clubhouse).permit(:name, :creator_id)
